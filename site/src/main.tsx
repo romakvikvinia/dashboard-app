@@ -3,8 +3,9 @@ import { createRoot } from "react-dom/client";
 
 import type { ConfigResponseType } from "./types/config.types.ts";
 import { setBaseUrls } from "./util/index.ts";
-import { RouterProvider } from "react-router/dom";
-import { routes } from "./router/index.ts";
+import { I18nextProvider } from "react-i18next";
+import i18n from "./i18n.ts";
+import AppRoutes from "./App.tsx";
 
 let xhrConfig: XMLHttpRequest;
 const reactDom = createRoot(document.getElementById("root")!);
@@ -44,7 +45,9 @@ function requestOnload() {
 
     reactDom.render(
       <StrictMode>
-        <RouterProvider router={routes} />
+        <I18nextProvider i18n={i18n}>
+          <AppRoutes />
+        </I18nextProvider>
       </StrictMode>
     );
   }

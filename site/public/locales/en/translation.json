@@ -1,0 +1,14 @@
+{
+  "Auth": {
+    "SignIn": {
+      "Title": "Sign In to Your Account",
+      "Username": "Username",
+      "Password": "Password",
+      "RememberMe": "Remember Me",
+      "ForgotPassword": "Forgot Password?",
+      "SignInButton": "Sign In",
+      "NoAccount": "Don't have an account?",
+      "SignUp": "Sign Up"
+    }
+  }
+}

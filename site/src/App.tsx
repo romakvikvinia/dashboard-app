@@ -1,28 +1,12 @@
-import { useState } from "react";
-
-import Header from "./common/Header";
-import Sidebar from "./common/SideBar";
-import Home from "./modules/home/Home";
-
+import { routes } from "./router";
+import { RouterProvider } from "react-router";
+import { withTranslation } from "react-i18next";
 import "./assets/scss/style.scss";
 
-function App() {
-  const [openSidebarToggle, setOpenSidebarToggle] = useState(false);
-
-  const OpenSidebar = () => {
-    setOpenSidebarToggle(!openSidebarToggle);
-  };
-
-  return (
-    <div className="grid-container">
-      <Header OpenSidebar={OpenSidebar} />
-      <Sidebar
-        openSidebarToggle={openSidebarToggle}
-        OpenSidebar={OpenSidebar}
-      />
-      <Home />
-    </div>
-  );
+function AppRoutes() {
+  return <RouterProvider router={routes} />;
 }
 
-export default App;
+const TranslatedAppRoutes = withTranslation()(AppRoutes);
+
+export default TranslatedAppRoutes;
