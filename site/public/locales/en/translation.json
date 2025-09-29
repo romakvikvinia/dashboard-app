@@ -2,7 +2,8 @@
   "Auth": {
     "SignIn": {
       "Title": "Sign In to Your Account",
-      "Username": "Username",
+      "Email": "Email",
+      "EmailPlaceholder": "Enter your Email",
       "Password": "Password",
       "RememberMe": "Remember Me",
       "ForgotPassword": "Forgot Password?",
