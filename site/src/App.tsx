@@ -1,6 +1,7 @@
 import { routes } from "./router";
 import { RouterProvider } from "react-router";
 import { withTranslation } from "react-i18next";
+import "bootstrap/dist/css/bootstrap.min.css";
 import "./assets/scss/style.scss";
 
 function AppRoutes() {
