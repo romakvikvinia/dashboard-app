@@ -1,9 +1,10 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
-import App from "./App.tsx";
 
 import type { ConfigResponseType } from "./types/config.types.ts";
 import { setBaseUrls } from "./util/index.ts";
+import { RouterProvider } from "react-router/dom";
+import { routes } from "./router/index.ts";
 
 let xhrConfig: XMLHttpRequest;
 const reactDom = createRoot(document.getElementById("root")!);
@@ -43,7 +44,7 @@ function requestOnload() {
 
     reactDom.render(
       <StrictMode>
-        <App />
+        <RouterProvider router={routes} />
       </StrictMode>
     );
   }
