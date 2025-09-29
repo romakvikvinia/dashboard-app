@@ -1,5 +1,6 @@
 import { createBrowserRouter } from "react-router";
 import Layout from "../modules/layout/Layout";
+import { protectedLoader } from "../common/loaders/protectedLoader";
 
 export const routes = createBrowserRouter([
   {
@@ -17,6 +18,7 @@ export const routes = createBrowserRouter([
   },
   {
     Component: Layout,
+    loader: protectedLoader,
     children: [
       {
         index: true,
