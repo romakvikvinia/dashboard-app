@@ -1,0 +1,6 @@
+{
+  "apiUrl": "http://localhost:8080/api",
+  "staticContentBaseUrl": "http://localhost:8080/static",
+  "server": "development",
+  "timeout": 5000
+}
